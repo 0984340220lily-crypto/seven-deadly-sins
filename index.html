@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>七大罪 - The Seven Deadly Sins</title>
+    <meta name="description" content="探索人類靈魂深處的七大罪 - 傲慢、嫉妒、暴怒、懶惰、貪婪、暴食、色慾。一個怪誕風格的互動式體驗。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Eater&family=Butcherman&family=Metal+Mania&family=Noto+Sans+TC:wght@400;500;700;900&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating Particles Background -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-logo">
+            <span class="logo-icon">☠</span>
+            <span class="logo-text">七大罪</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">首頁</a></li>
+            <li><a href="#sins">七宗罪</a></li>
+            <li><a href="#mandala">曼陀拉思考</a></li>
+            <li><a href="#analysis">深度分析</a></li>
+        </ul>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-eye">
+                <div class="eye-outer">
+                    <div class="eye-inner">
+                        <div class="eye-pupil"></div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">七</span>
+                <span class="title-line">大</span>
+                <span class="title-line">罪</span>
+            </h1>
+            <p class="hero-subtitle">The Seven Deadly Sins</p>
+            <p class="hero-description">
+                探索人類靈魂深處最黑暗的慾望<br>
+                每一宗罪，都是通往深淵的階梯
+            </p>
+            <a href="#sins" class="cta-button">
+                <span class="button-text">進入深淵</span>
+                <span class="button-icon">↓</span>
+            </a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>向下滾動</span>
+        </div>
+    </section>
+
+    <!-- Seven Sins Section -->
+    <section class="sins-section" id="sins">
+        <div class="section-header">
+            <h2 class="section-title">七宗罪</h2>
+            <p class="section-subtitle">人性中最原始的黑暗面</p>
+        </div>
+        
+        <div class="sins-container">
+            <!-- Pride - 傲慢 -->
+            <div class="sin-card" data-sin="pride">
+                <div class="sin-icon">👑</div>
+                <div class="sin-number">I</div>
+                <h3 class="sin-name">傲慢</h3>
+                <p class="sin-latin">Superbia</p>
+                <div class="sin-content">
+                    <p class="sin-description">
+                        傲慢被視為七宗罪之首，是所有罪惡的根源。它是一種過度自我膨脹的狀態，使人認為自己優於他人，甚至凌駕於神之上。
+                    </p>
+                    <div class="sin-details">
+                        <div class="detail-item">
+                            <span class="detail-label">對應惡魔</span>
+                            <span class="detail-value">路西法 (Lucifer)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">對應美德</span>
+                            <span class="detail-value">謙遜 (Humility)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">代表顏色</span>
+                            <span class="detail-value">紫色</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">代表動物</span>
+                            <span class="detail-value">獅子、孔雀</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sin-overlay"></div>
+            </div>
+
+            <!-- Envy - 嫉妒 -->
+            <div class="sin-card" data-sin="envy">
+                <div class="sin-icon">👁</div>
+                <div class="sin-number">II</div>
+                <h3 class="sin-name">嫉妒</h3>
+                <p class="sin-latin">Invidia</p>
+                <div class="sin-content">
+                    <p class="sin-description">
+                        嫉妒是對他人所擁有之物的渴望與怨恨。它不僅是想要得到別人擁有的東西，更是希望對方失去它。這種陰暗的情感會腐蝕人心。
+                    </p>
+                    <div class="sin-details">
+                        <div class="detail-item">
+                            <span class="detail-label">對應惡魔</span>
+                            <span class="detail-value">利維坦 (Leviathan)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">對應美德</span>
+                            <span class="detail-value">寬容 (Kindness)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">代表顏色</span>
+                            <span class="detail-value">綠色</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">代表動物</span>
+                            <span class="detail-value">蛇</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sin-overlay"></div>
+            </div>
+
+            <!-- Wrath - 暴怒 -->
+            <div class="sin-card" data-sin="wrath">
+                <div class="sin-icon">🔥</div>
+                <div class="sin-number">III</div>
+                <h3 class="sin-name">暴怒</h3>
+                <p class="sin-latin">Ira</p>
+                <div class="sin-content">
+                    <p class="sin-description">
+                        暴怒是一種失控的憤怒，它驅使人做出暴力和復仇的行為。這種無法控制的怒火會摧毀理性，使人成為情緒的奴隸。
+                    </p>
+                    <div class="sin-details">
+                        <div class="detail-item">
+                            <span class="detail-label">對應惡魔</span>
+                            <span class="detail-value">撒旦 (Satan)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">對應美德</span>
+                            <span class="detail-value">耐心 (Patience)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">代表顏色</span>
+                            <span class="detail-value">紅色</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">代表動物</span>
+                            <span class="detail-value">熊</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sin-overlay"></div>
+            </div>
+
+            <!-- Sloth - 懶惰 -->
+            <div class="sin-card" data-sin="sloth">
+                <div class="sin-icon">💤</div>
+                <div class="sin-number">IV</div>
+                <h3 class="sin-name">懶惰</h3>
+                <p class="sin-latin">Acedia</p>
+                <div class="sin-content">
+                    <p class="sin-description">
+                        懶惰不僅是身體上的慵懶，更是心靈上的冷漠與麻木。它使人對生活失去熱情，放棄成長與進步，最終在虛無中消亡。
+                    </p>
+                    <div class="sin-details">
+                        <div class="detail-item">
+                            <span class="detail-label">對應惡魔</span>
+                            <span class="detail-value">貝爾芬格 (Belphegor)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">對應美德</span>
+                            <span class="detail-value">勤奮 (Diligence)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">代表顏色</span>
+                            <span class="detail-value">淺藍色</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">代表動物</span>
+                            <span class="detail-value">樹懶、蝸牛</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sin-overlay"></div>
+            </div>
+
+            <!-- Greed - 貪婪 -->
+            <div class="sin-card" data-sin="greed">
+                <div class="sin-icon">💰</div>
+                <div class="sin-number">V</div>
+                <h3 class="sin-name">貪婪</h3>
+                <p class="sin-latin">Avaritia</p>
+                <div class="sin-content">
+                    <p class="sin-description">
+                        貪婪是對物質財富的無盡追求，永遠不滿足現狀。它使人為了金錢和權力不擇手段，失去人性中的善良與同理心。
+                    </p>
+                    <div class="sin-details">
+                        <div class="detail-item">
+                            <span class="detail-label">對應惡魔</span>
+                            <span class="detail-value">瑪門 (Mammon)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">對應美德</span>
+                            <span class="detail-value">慷慨 (Charity)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">代表顏色</span>
+                            <span class="detail-value">黃色、金色</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">代表動物</span>
+                            <span class="detail-value">狐狸、蟾蜍</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sin-overlay"></div>
+            </div>
+
+            <!-- Gluttony - 暴食 -->
+            <div class="sin-card" data-sin="gluttony">
+                <div class="sin-icon">🍖</div>
+                <div class="sin-number">VI</div>
+                <h3 class="sin-name">暴食</h3>
+                <p class="sin-latin">Gula</p>
+                <div class="sin-content">
+                    <p class="sin-description">
+                        暴食是對食物和享樂的過度追求，超越了身體的實際需要。它象徵著對感官刺激的沉溺，使人失去自我控制的能力。
+                    </p>
+                    <div class="sin-details">
+                        <div class="detail-item">
+                            <span class="detail-label">對應惡魔</span>
+                            <span class="detail-value">別西卜 (Beelzebub)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">對應美德</span>
+                            <span class="detail-value">節制 (Temperance)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">代表顏色</span>
+                            <span class="detail-value">橙色</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">代表動物</span>
+                            <span class="detail-value">豬</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sin-overlay"></div>
+            </div>
+
+            <!-- Lust - 色慾 -->
+            <div class="sin-card" data-sin="lust">
+                <div class="sin-icon">❤️‍🔥</div>
+                <div class="sin-number">VII</div>
+                <h3 class="sin-name">色慾</h3>
+                <p class="sin-latin">Luxuria</p>
+                <div class="sin-content">
+                    <p class="sin-description">
+                        色慾是對肉體快感的過度追求，超越了愛與尊重的界限。它使人沉溺於感官享樂，忽視了靈魂層面的真正連結。
+                    </p>
+                    <div class="sin-details">
+                        <div class="detail-item">
+                            <span class="detail-label">對應惡魔</span>
+                            <span class="detail-value">阿斯莫德 (Asmodeus)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">對應美德</span>
+                            <span class="detail-value">貞潔 (Chastity)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">代表顏色</span>
+                            <span class="detail-value">粉紅色</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">代表動物</span>
+                            <span class="detail-value">山羊、蠍子</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sin-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mandala Thinking Section -->
+    <section class="mandala-section" id="mandala">
+        <div class="section-header">
+            <h2 class="section-title">曼陀拉思考</h2>
+            <p class="section-subtitle">系統性思維分析架構</p>
+        </div>
+        
+        <div class="mandala-container">
+            <table class="mandala-table">
+                <thead>
+                    <tr>
+                        <th>罪名</th>
+                        <th>本質定義</th>
+                        <th>表現形式</th>
+                        <th>心理根源</th>
+                        <th>社會影響</th>
+                        <th>對應美德</th>
+                        <th>救贖之道</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-sin="pride">
+                        <td class="sin-cell">傲慢</td>
+                        <td>過度自我膨脹</td>
+                        <td>輕視他人、自以為是</td>
+                        <td>不安全感的補償</td>
+                        <td>破壞團隊合作</td>
+                        <td>謙遜</td>
+                        <td>接納自己的不完美</td>
+                    </tr>
+                    <tr data-sin="envy">
+                        <td class="sin-cell">嫉妒</td>
+                        <td>渴望他人所有</td>
+                        <td>怨恨、誹謗、破壞</td>
+                        <td>自我價值感缺失</td>
+                        <td>人際關係惡化</td>
+                        <td>寬容</td>
+                        <td>專注自我成長</td>
+                    </tr>
+                    <tr data-sin="wrath">
+                        <td class="sin-cell">暴怒</td>
+                        <td>失控的憤怒</td>
+                        <td>暴力、復仇、毀滅</td>
+                        <td>無力感的爆發</td>
+                        <td>暴力循環</td>
+                        <td>耐心</td>
+                        <td>學習情緒管理</td>
+                    </tr>
+                    <tr data-sin="sloth">
+                        <td class="sin-cell">懶惰</td>
+                        <td>心靈的冷漠</td>
+                        <td>拖延、逃避、麻木</td>
+                        <td>恐懼失敗</td>
+                        <td>社會生產力下降</td>
+                        <td>勤奮</td>
+                        <td>找回生活熱情</td>
+                    </tr>
+                    <tr data-sin="greed">
+                        <td class="sin-cell">貪婪</td>
+                        <td>永不滿足的慾望</td>
+                        <td>囤積、剝削、欺詐</td>
+                        <td>匱乏感的恐懼</td>
+                        <td>貧富差距擴大</td>
+                        <td>慷慨</td>
+                        <td>學會知足與分享</td>
+                    </tr>
+                    <tr data-sin="gluttony">
+                        <td class="sin-cell">暴食</td>
+                        <td>過度感官追求</td>
+                        <td>無節制消費</td>
+                        <td>空虛感的填補</td>
+                        <td>資源浪費</td>
+                        <td>節制</td>
+                        <td>培養自我控制</td>
+                    </tr>
+                    <tr data-sin="lust">
+                        <td class="sin-cell">色慾</td>
+                        <td>肉體快感的沉溺</td>
+                        <td>不倫、成癮</td>
+                        <td>親密感的替代</td>
+                        <td>家庭破裂</td>
+                        <td>貞潔</td>
+                        <td>建立真誠的連結</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Deep Analysis Section -->
+    <section class="analysis-section" id="analysis">
+        <div class="section-header">
+            <h2 class="section-title">深度分析</h2>
+            <p class="section-subtitle">七大罪的歷史與哲學探討</p>
+        </div>
+        
+        <div class="analysis-container">
+            <div class="analysis-card">
+                <div class="analysis-icon">📜</div>
+                <h3>歷史起源</h3>
+                <p>
+                    七大罪的概念最早可追溯至西元四世紀，由埃及修士埃瓦格里烏斯·龐蒂庫斯 (Evagrius Ponticus) 
+                    提出的「八種邪惡思想」。後來，教宗額我略一世在西元590年將其整理為我們今天所知的七宗罪。
+                    這個概念深刻影響了中世紀的道德觀念和藝術創作。
+                </p>
+            </div>
+            
+            <div class="analysis-card">
+                <div class="analysis-icon">🧠</div>
+                <h3>心理學觀點</h3>
+                <p>
+                    從現代心理學的角度來看，七大罪反映了人類基本需求的極端表現。佛洛伊德認為這些「罪」
+                    源自本我 (Id) 與超我 (Super-ego) 之間的衝突。榮格則將其視為人類集體潛意識中的陰影原型，
+                    是人性中必須被認識和整合的部分。
+                </p>
+            </div>
+            
+            <div class="analysis-card">
+                <div class="analysis-icon">⚖️</div>
+                <h3>道德哲學</h3>
+                <p>
+                    七大罪挑戰了「什麼是善」這個永恆的哲學問題。亞里斯多德的中庸之道認為，
+                    美德是兩個極端之間的平衡點。七大罪代表的是這種平衡的破壞——過度或不足都會導致道德的墮落。
+                    每一宗罪都對應著一種美德，提供了自我救贖的道路。
+                </p>
+            </div>
+            
+            <div class="analysis-card">
+                <div class="analysis-icon">🎭</div>
+                <h3>文化影響</h3>
+                <p>
+                    七大罪深刻影響了西方藝術與文學。從但丁的《神曲》到現代電影《乘》，這個主題不斷被重新詮釋。
+                    在東方文化中，雖然沒有完全對應的概念，但佛教的「三毒」（貪、嗔、痴）和道家對慾望的批判
+                    展現了類似的人性反思。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-icon">☠</span>
+                <span class="logo-text">七大罪</span>
+            </div>
+            <p class="footer-quote">
+                "地獄空蕩蕩，魔鬼在人間"<br>
+                <span class="quote-author">— 威廉·莎士比亞</span>
+            </p>
+            <div class="footer-divider"></div>
+            <p class="footer-copyright">
+                © 2024 七大罪研究 | 基於 Canva 心智圖設計
+            </p>
+        </div>
+        <div class="footer-flames">
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+            <div class="flame"></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
