@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollEffects();
     initSinCards();
     initEyeTracking();
+    initCharacterStories();
 });
 
 /* ============================================
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initParticles() {
     const particlesContainer = document.getElementById('particles');
     const particleCount = 50;
-    
+
     for (let i = 0; i < particleCount; i++) {
         createParticle(particlesContainer);
     }
@@ -26,18 +27,18 @@ function initParticles() {
 function createParticle(container) {
     const particle = document.createElement('div');
     particle.className = 'particle';
-    
+
     // Random properties
     const size = Math.random() * 4 + 2;
     const left = Math.random() * 100;
     const animationDuration = Math.random() * 20 + 10;
     const animationDelay = Math.random() * 10;
     const opacity = Math.random() * 0.5 + 0.1;
-    
+
     // Random colors
     const colors = ['#8b0000', '#ff4444', '#4a0000', '#ff6b6b', '#9b59b6', '#e74c3c'];
     const color = colors[Math.floor(Math.random() * colors.length)];
-    
+
     particle.style.cssText = `
         width: ${size}px;
         height: ${size}px;
@@ -47,7 +48,7 @@ function createParticle(container) {
         animation-delay: -${animationDelay}s;
         opacity: ${opacity};
     `;
-    
+
     container.appendChild(particle);
 }
 
@@ -59,7 +60,7 @@ function initNavigation() {
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.querySelector('.nav-links');
     const links = document.querySelectorAll('.nav-links a');
-    
+
     // Scroll effect
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {
@@ -68,13 +69,13 @@ function initNavigation() {
             nav.classList.remove('scrolled');
         }
     });
-    
+
     // Mobile toggle
     navToggle.addEventListener('click', () => {
         navToggle.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
-    
+
     // Close menu on link click
     links.forEach(link => {
         link.addEventListener('click', () => {
@@ -82,22 +83,22 @@ function initNavigation() {
             navLinks.classList.remove('active');
         });
     });
-    
+
     // Active link on scroll
     const sections = document.querySelectorAll('section[id]');
-    
+
     window.addEventListener('scroll', () => {
         let current = '';
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop - 200;
             const sectionHeight = section.offsetHeight;
-            
+
             if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
                 current = section.getAttribute('id');
             }
         });
-        
+
         links.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
@@ -116,7 +117,7 @@ function initScrollEffects() {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -124,7 +125,7 @@ function initScrollEffects() {
             }
         });
     }, observerOptions);
-    
+
     // Observe sin cards
     document.querySelectorAll('.sin-card').forEach((card, index) => {
         card.style.opacity = '0';
@@ -132,7 +133,7 @@ function initScrollEffects() {
         card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
         observer.observe(card);
     });
-    
+
     // Observe analysis cards
     document.querySelectorAll('.analysis-card').forEach((card, index) => {
         card.style.opacity = '0';
@@ -140,7 +141,7 @@ function initScrollEffects() {
         card.style.transition = `opacity 0.6s ease ${index * 0.15}s, transform 0.6s ease ${index * 0.15}s`;
         observer.observe(card);
     });
-    
+
     // Observe table rows
     document.querySelectorAll('.mandala-table tbody tr').forEach((row, index) => {
         row.style.opacity = '0';
@@ -148,7 +149,7 @@ function initScrollEffects() {
         row.style.transition = `opacity 0.4s ease ${index * 0.1}s, transform 0.4s ease ${index * 0.1}s`;
         observer.observe(row);
     });
-    
+
     // Add visible class styles
     const style = document.createElement('style');
     style.textContent = `
@@ -160,12 +161,12 @@ function initScrollEffects() {
         }
     `;
     document.head.appendChild(style);
-    
+
     // Parallax effect for hero
     window.addEventListener('scroll', () => {
         const hero = document.querySelector('.hero');
         const scrolled = window.scrollY;
-        
+
         if (scrolled < window.innerHeight) {
             hero.style.transform = `translateY(${scrolled * 0.3}px)`;
             hero.style.opacity = 1 - (scrolled / window.innerHeight) * 0.5;
@@ -178,27 +179,27 @@ function initScrollEffects() {
    ============================================ */
 function initSinCards() {
     const cards = document.querySelectorAll('.sin-card');
-    
+
     cards.forEach(card => {
         // Mouse move effect
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            
+
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-            
+
             const rotateX = (y - centerY) / 20;
             const rotateY = (centerX - x) / 20;
-            
+
             card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
         });
-        
+
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
         });
-        
+
         // Click to expand (optional)
         card.addEventListener('click', () => {
             const sin = card.dataset.sin;
@@ -212,20 +213,20 @@ function initSinCards() {
    ============================================ */
 function initEyeTracking() {
     const eye = document.querySelector('.eye-inner');
-    
+
     if (!eye) return;
-    
+
     document.addEventListener('mousemove', (e) => {
         const eyeRect = eye.getBoundingClientRect();
         const eyeCenterX = eyeRect.left + eyeRect.width / 2;
         const eyeCenterY = eyeRect.top + eyeRect.height / 2;
-        
+
         const angle = Math.atan2(e.clientY - eyeCenterY, e.clientX - eyeCenterX);
         const distance = Math.min(8, Math.hypot(e.clientX - eyeCenterX, e.clientY - eyeCenterY) / 50);
-        
+
         const x = Math.cos(angle) * distance;
         const y = Math.sin(angle) * distance;
-        
+
         eye.style.transform = `translate(${x}px, ${y}px)`;
     });
 }
@@ -285,10 +286,10 @@ function showSinModal(sin) {
             description: '色慾的火焰燃燒著理性，讓人沉溺於肉體的快感而忘記靈魂的價值。'
         }
     };
-    
+
     const data = sinData[sin];
     if (!data) return;
-    
+
     // Create ripple effect on click
     const card = document.querySelector(`[data-sin="${sin}"]`);
     if (card) {
@@ -306,12 +307,12 @@ function showSinModal(sin) {
             pointer-events: none;
             animation: ripple 0.6s ease-out forwards;
         `;
-        
+
         card.appendChild(ripple);
-        
+
         setTimeout(() => ripple.remove(), 600);
     }
-    
+
     // Add ripple animation
     if (!document.getElementById('ripple-style')) {
         const style = document.createElement('style');
@@ -333,10 +334,10 @@ function showSinModal(sin) {
    Smooth Scroll for Anchor Links
    ============================================ */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
@@ -352,10 +353,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 function initTypingEffect() {
     const description = document.querySelector('.hero-description');
     if (!description) return;
-    
+
     const text = description.innerHTML;
     description.innerHTML = '';
-    
+
     let i = 0;
     const typeWriter = () => {
         if (i < text.length) {
@@ -369,7 +370,7 @@ function initTypingEffect() {
             setTimeout(typeWriter, 50);
         }
     };
-    
+
     // Start after a delay
     setTimeout(typeWriter, 1000);
 }
@@ -381,21 +382,80 @@ document.querySelectorAll('.mandala-table tbody tr').forEach(row => {
     row.addEventListener('mouseenter', () => {
         const sin = row.dataset.sin;
         const correspondingCard = document.querySelector(`.sin-card[data-sin="${sin}"]`);
-        
+
         if (correspondingCard) {
             correspondingCard.style.boxShadow = '0 0 30px rgba(139, 0, 0, 0.5)';
         }
     });
-    
+
     row.addEventListener('mouseleave', () => {
         const sin = row.dataset.sin;
         const correspondingCard = document.querySelector(`.sin-card[data-sin="${sin}"]`);
-        
+
         if (correspondingCard) {
             correspondingCard.style.boxShadow = '';
         }
     });
 });
+
+/* ============================================
+   Character Stories - Read More Toggle
+   ============================================ */
+function initCharacterStories() {
+    const readMoreBtns = document.querySelectorAll('.read-more-btn');
+
+    readMoreBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.character-card');
+            const storyFull = card.querySelector('.story-full');
+            const btnText = btn.querySelector('.btn-text');
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+            if (isExpanded) {
+                // Collapse
+                storyFull.hidden = true;
+                btn.setAttribute('aria-expanded', 'false');
+                btnText.textContent = '閱讀完整故事';
+            } else {
+                // Expand
+                storyFull.hidden = false;
+                btn.setAttribute('aria-expanded', 'true');
+                btnText.textContent = '收合故事';
+            }
+        });
+    });
+
+    // Add scroll animation for character cards
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.character-card').forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(50px)';
+        card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        observer.observe(card);
+    });
+
+    // Add visible class styles for character cards
+    const style = document.createElement('style');
+    style.textContent = `
+        .character-card.visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    `;
+    document.head.appendChild(style);
+}
 
 /* ============================================
    Console Easter Egg

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,16 @@
     <meta name="description" content="探索人類靈魂深處的七大罪 - 傲慢、嫉妒、暴怒、懶惰、貪婪、暴食、色慾。一個怪誕風格的互動式體驗。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Eater&family=Butcherman&family=Metal+Mania&family=Noto+Sans+TC:wght@400;500;700;900&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Eater&family=Butcherman&family=Metal+Mania&family=Noto+Sans+TC:wght@400;500;700;900&family=ZCOOL+KuaiLe&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Floating Particles Background -->
     <div class="particles" id="particles"></div>
-    
+
     <!-- Navigation -->
     <nav class="main-nav" id="mainNav">
         <div class="nav-logo">
@@ -23,6 +27,7 @@
         <ul class="nav-links">
             <li><a href="#home" class="active">首頁</a></li>
             <li><a href="#sins">七宗罪</a></li>
+            <li><a href="#characters">角色故事</a></li>
             <li><a href="#mandala">曼陀拉思考</a></li>
             <li><a href="#analysis">深度分析</a></li>
         </ul>
@@ -72,7 +77,7 @@
             <h2 class="section-title">七宗罪</h2>
             <p class="section-subtitle">人性中最原始的黑暗面</p>
         </div>
-        
+
         <div class="sins-container">
             <!-- Pride - 傲慢 -->
             <div class="sin-card" data-sin="pride">
@@ -300,13 +305,205 @@
         </div>
     </section>
 
+    <!-- Character Stories Section -->
+    <section class="characters-section" id="characters">
+        <div class="section-header">
+            <h2 class="section-title">角色故事</h2>
+            <p class="section-subtitle">七罪化身與他們的故事</p>
+        </div>
+
+        <div class="characters-container">
+            <!-- 色慾 Lust -->
+            <article class="character-card" data-sin="lust">
+                <div class="character-image">
+                    <img src="images/lust.jpg" alt="色慾 - 阿斯莫德" loading="lazy">
+                    <div class="sin-badge">色慾</div>
+                </div>
+                <div class="character-content">
+                    <div class="story-header">
+                        <h3 class="character-name">色慾 <span class="latin-name">Luxuria</span></h3>
+                        <h4 class="story-title">《群》</h4>
+                    </div>
+                    <div class="story-excerpt">
+                        <p>楊格是圈內頂尖的公關總監，專替富二代擺爛、暴網紅洗人設。但他私底下的綽號叫「山羊」，這在圈子裡只有一個意思：他是只獵不走心的頂級玩家。</p>
+                    </div>
+                    <button class="read-more-btn" aria-expanded="false">
+                        <span class="btn-text">閱讀完整故事</span>
+                        <span class="btn-icon">↓</span>
+                    </button>
+                    <div class="story-full" hidden>
+                        <p>楊格是圈內頂尖的公關總監，專替富二代擺爛、暴網紅洗人設。他的手機響了揚起某種資料迴，檔名只有一個字：「群」。點開來全部裸照的標籤「A04/極致緊實」、「B12/配合度高」、「C09/心累好騙」。
+                        </p>
+                        <p>前陣子，他釘上了喬安。喬安是出了名的冰山女記者。終於，那個他上釣了。喬安在飯店房間裡展現出與平日截然不同的熱情。但在那一刻，楊格腦子裡想的不是「我愛她」，而是冰冰冰冰的一句：「終於耕了」。
+                        </p>
+                        <p>對他來說，喬安不再是一個人。只是一個被用過的一次性容器。他穿上褲子就走，把她像垃圾一樣留在房間裡。</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 嫉妒 Envy -->
+            <article class="character-card" data-sin="envy">
+                <div class="character-image">
+                    <img src="images/envy_greed.jpg" alt="嫉妒 - 利維坦" loading="lazy"
+                        style="object-position: left center;">
+                    <div class="sin-badge">嫉妒</div>
+                </div>
+                <div class="character-content">
+                    <div class="story-header">
+                        <h3 class="character-name">嫉妒 <span class="latin-name">Invidia</span></h3>
+                        <h4 class="story-title">《完美的局外人》</h4>
+                    </div>
+                    <div class="story-excerpt">
+                        <p>李婉是集團董事長的管理者，她是父親眼中「不用擔心」的大女兒。直到那個創業失敗、一事無成的妹妹李欖，被爹接回家。</p>
+                    </div>
+                    <button class="read-more-btn" aria-expanded="false">
+                        <span class="btn-text">閱讀完整故事</span>
+                        <span class="btn-icon">↓</span>
+                    </button>
+                    <div class="story-full" hidden>
+                        <p>父親不僅沒責備，還把公司最重要的年度發布會交給妹妹去玩，只因為「想給妹妹一點生活重心。」李婉心裡氣走了。她過了沉默，暗淡觀察，在暗年裡把事情攪壞。</p>
+                        <p>發布會變成災難、父親氣到住院，妹妹崩潰自責。李婉收完殘舊場，證明了自己能力。但在病床旁，父親卻說：「公司本來就想給妳的，我只是想讓妹妹開心一下。妳擁有一切，卻還是這樣對待了作為『家人』的責任。」
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 傲慢 Pride -->
+            <article class="character-card" data-sin="pride">
+                <div class="character-image">
+                    <img src="images/pride.jpg" alt="傲慢 - 路西法" loading="lazy">
+                    <div class="sin-badge">傲慢</div>
+                </div>
+                <div class="character-content">
+                    <div class="story-header">
+                        <h3 class="character-name">傲慢 <span class="latin-name">Superbia</span></h3>
+                        <h4 class="story-title">《雲端的裂痕》</h4>
+                    </div>
+                    <div class="story-excerpt">
+                        <p>陳希安是高冷的建築界霸道，追求極致完美。他的豪宅代表作擁有一座60層樓高的全透明玻璃浮游池。</p>
+                    </div>
+                    <button class="read-more-btn" aria-expanded="false">
+                        <span class="btn-text">閱讀完整故事</span>
+                        <span class="btn-icon">↓</span>
+                    </button>
+                    <div class="story-full" hidden>
+                        <p>發布會前夕，現場底板出現了一道肉眼難發見的微小裂痕。陳希安傲慢地拒絕更換，高傲地說：「這是在現地心引力的證明。」</p>
+                        <p>然後，他站在浮池上方的透明步道，高傲地頂著場望的共振，讓那道裂縫瞬間擴散。玻璃粉碎。他不可一世的舊態，在萬人矚目下，連同數百噸池水一起從高空墜落，死於他唯一的傲慢。</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 貪婪 Greed -->
+            <article class="character-card" data-sin="greed">
+                <div class="character-image">
+                    <img src="images/envy_greed.jpg" alt="貪婪 - 瑪門" loading="lazy"
+                        style="object-position: right center;">
+                    <div class="sin-badge">貪婪</div>
+                </div>
+                <div class="character-content">
+                    <div class="story-header">
+                        <h3 class="character-name">貪婪 <span class="latin-name">Avaritia</span></h3>
+                        <h4 class="story-title">《狐狸有洞》</h4>
+                    </div>
+                    <div class="story-excerpt">
+                        <p>胡力是地產界的傳奇，他總是用「石頭」變成「爛泥」，把沒人要的爛尾樓包裝成搶破頭的限量豪宅。</p>
+                    </div>
+                    <button class="read-more-btn" aria-expanded="false">
+                        <span class="btn-text">閱讀完整故事</span>
+                        <span class="btn-icon">↓</span>
+                    </button>
+                    <div class="story-full" hidden>
+                        <p>看著滿滿不斷的年輕人前接後繼的將頭期款放入自己的口袋，是他最大的樂趣。他直接找上了馬大爺正在讀書買不起房的兒子小弟：「只要簽了字，這筆錢就是你在重劃區新房的頭教。」小弟簽字了。</p>
+                        <p>三年後，胡力住在最頂層豪宅中，卻突然失眠了。他突然想起老馬太曾說過的話：「狐狸有洞，天空的飛鳥有窩，人子卻沒有枕頭的地方。」他這隻「狐狸」在這個城市擁有無數個「洞」，卻早已失去了「家」。
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 憤怒 Wrath -->
+            <article class="character-card" data-sin="wrath">
+                <div class="character-image">
+                    <img src="images/wrath.jpg" alt="憤怒 - 撒旦" loading="lazy">
+                    <div class="sin-badge">憤怒</div>
+                </div>
+                <div class="character-content">
+                    <div class="story-header">
+                        <h3 class="character-name">憤怒 <span class="latin-name">Ira</span></h3>
+                        <h4 class="story-title">《獨角獸之怒》</h4>
+                    </div>
+                    <div class="story-excerpt">
+                        <p>葉謙是某上市科技公司的辦公主，最顯眼的就是一座通透的水晶獨角獸。這個名字裡帶著「謙」字的男人，有著名的暴怒。</p>
+                    </div>
+                    <button class="read-more-btn" aria-expanded="false">
+                        <span class="btn-text">閱讀完整故事</span>
+                        <span class="btn-icon">↓</span>
+                    </button>
+                    <div class="story-full" hidden>
+                        <p>「這裡沒用的廢物！」他常常這樣責罵部屬。那隻獨角獸是用來一揮拜擊碎的工具，享受著那主宰自生的權威。</p>
+                        <p>三天後，帳戶被駭，公司運營停擺。保安逼近，他拿起水晶獨角獸。在夕陽殘紅的照射中，他成了自己烈火中唯一的祭品。</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 暴食 Gluttony -->
+            <article class="character-card" data-sin="gluttony">
+                <div class="character-image">
+                    <img src="images/gluttony.jpg" alt="暴食 - 別西卜" loading="lazy">
+                    <div class="sin-badge">暴食</div>
+                </div>
+                <div class="character-content">
+                    <div class="story-header">
+                        <h3 class="character-name">暴食 <span class="latin-name">Gula</span></h3>
+                        <h4 class="story-title">《玻璃上的模擬》</h4>
+                    </div>
+                    <div class="story-excerpt">
+                        <p>直播鏡頭前的環形補光燈亮起，畢哲修露出招牌的跨張笑容。「各位寶寶們，今天我們要挑戰的是——整整五公斤的A5和牛黑鮪魚腹肉極致饗宴！」</p>
+                    </div>
+                    <button class="read-more-btn" aria-expanded="false">
+                        <span class="btn-text">閱讀完整故事</span>
+                        <span class="btn-icon">↓</span>
+                    </button>
+                    <div class="story-full" hidden>
+                        <p>醫生冷淡地宣告：「病情急重！必須規劃飲食來。」但直播繼續，觀眾要看吃播，觀眾期待的人依舊大喊：「吃!吃!吃!」</p>
+                        <p>他已經沒有其他生活了，那些腸腔與胃與消化道，是他唯一證明自己存在的證明。診斷結果是晚期胃潰瘍。即使如此，他還是衝出病房，接起新一場直播。</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 怠惰 Sloth -->
+            <article class="character-card" data-sin="sloth">
+                <div class="character-image">
+                    <img src="images/sloth.jpg" alt="怠惰 - 貝爾芬格" loading="lazy">
+                    <div class="sin-badge">怠惰</div>
+                </div>
+                <div class="character-content">
+                    <div class="story-header">
+                        <h3 class="character-name">怠惰 <span class="latin-name">Acedia</span></h3>
+                        <h4 class="story-title">《被埋起來的那一天》</h4>
+                    </div>
+                    <div class="story-excerpt">
+                        <p>林柏升是一名客服員工，他懂得如何混時間、如何逃避、怎麽假裝在開會實則看抖音。他住在一座凌亂的房間，總是說「忙」來逃避。</p>
+                    </div>
+                    <button class="read-more-btn" aria-expanded="false">
+                        <span class="btn-text">閱讀完整故事</span>
+                        <span class="btn-icon">↓</span>
+                    </button>
+                    <div class="story-full" hidden>
+                        <p>幾年後，林柏升在閣樓打瞌睡整天不出門。四周瀰漫著一座真空的感覺，他突然領悟：所有人的海卜、所有朋友的重量，都「打得」傳著被子裡的自己。卻看不見任何存在的眼睛。</p>
+                        <p>原來，當一個人選擇對世界無動於衷，世界也將對他無動於衷。</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
     <!-- Mandala Thinking Section -->
     <section class="mandala-section" id="mandala">
         <div class="section-header">
             <h2 class="section-title">曼陀拉思考</h2>
             <p class="section-subtitle">系統性思維分析架構</p>
         </div>
-        
+
         <div class="mandala-container">
             <table class="mandala-table">
                 <thead>
@@ -395,18 +592,18 @@
             <h2 class="section-title">深度分析</h2>
             <p class="section-subtitle">七大罪的歷史與哲學探討</p>
         </div>
-        
+
         <div class="analysis-container">
             <div class="analysis-card">
                 <div class="analysis-icon">📜</div>
                 <h3>歷史起源</h3>
                 <p>
-                    七大罪的概念最早可追溯至西元四世紀，由埃及修士埃瓦格里烏斯·龐蒂庫斯 (Evagrius Ponticus) 
+                    七大罪的概念最早可追溯至西元四世紀，由埃及修士埃瓦格里烏斯·龐蒂庫斯 (Evagrius Ponticus)
                     提出的「八種邪惡思想」。後來，教宗額我略一世在西元590年將其整理為我們今天所知的七宗罪。
                     這個概念深刻影響了中世紀的道德觀念和藝術創作。
                 </p>
             </div>
-            
+
             <div class="analysis-card">
                 <div class="analysis-icon">🧠</div>
                 <h3>心理學觀點</h3>
@@ -416,7 +613,7 @@
                     是人性中必須被認識和整合的部分。
                 </p>
             </div>
-            
+
             <div class="analysis-card">
                 <div class="analysis-icon">⚖️</div>
                 <h3>道德哲學</h3>
@@ -426,7 +623,7 @@
                     每一宗罪都對應著一種美德，提供了自我救贖的道路。
                 </p>
             </div>
-            
+
             <div class="analysis-card">
                 <div class="analysis-icon">🎭</div>
                 <h3>文化影響</h3>
@@ -466,4 +663,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
